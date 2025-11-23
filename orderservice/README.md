@@ -23,7 +23,7 @@ OrderService is used to Create and manage orders, integrating with an external I
 3) API (HTTP)
 Base path: /order
 
-POST /order
+POST:: /order
 - Description: Place an order.
 - Request JSON (example):
 
@@ -44,7 +44,7 @@ POST /order
   "quantity": 5,
   "status": "CONFIRMED",
   "orderDate": "2025-11-23T12:34:56",
-  "message": "Order confirmed. Remaining stock: 5",
+  "message": "Order confirmed",
   "success": true,
   "remainingStock": 5
 }
