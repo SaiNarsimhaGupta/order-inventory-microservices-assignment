@@ -24,7 +24,7 @@ OrderService is used to Create and manage orders, integrating with an external I
 Base path: /order
 
 POST /order
-- Description: Place an order. The controller validates the payload, calls service logic, and returns a DTO.
+- Description: Place an order.
 - Request JSON (example):
 
 ```json
