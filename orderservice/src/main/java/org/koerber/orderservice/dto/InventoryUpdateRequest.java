@@ -8,22 +8,20 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- * Request DTO for inventory update operations
- */
+/** Request DTO for inventory update operations */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class InventoryUpdateRequest {
 
-    @NotBlank(message = "productCode is required")
-    private String productCode;
+  @NotBlank(message = "productCode is required")
+  private String productCode;
 
-    @NotNull(message = "Quantity to deduct is required")
-    @Min(value = 1, message = "Quantity must be at least 1")
-    private Integer quantityToDeduct;
+  @NotNull(message = "Quantity to deduct is required")
+  @Min(value = 1, message = "Quantity must be at least 1")
+  private Integer quantityToDeduct;
 
-    @NotBlank(message = "Order ID is required")
-    private String orderId;
+  @NotBlank(message = "Order ID is required")
+  private String orderId;
 }

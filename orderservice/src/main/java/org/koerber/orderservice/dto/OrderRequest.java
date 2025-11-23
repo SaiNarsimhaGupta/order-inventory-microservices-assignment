@@ -8,19 +8,17 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- * Request DTO for creating an order
- */
+/** Request DTO for creating an order */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class OrderRequest {
 
-    @NotBlank(message = "Product code is required")
-    private String productCode;
+  @NotBlank(message = "Product code is required")
+  private String productCode;
 
-    @NotNull(message = "Quantity is required")
-    @Min(value = 1, message = "Quantity must be at least 1")
-    private Integer quantity;
+  @NotNull(message = "Quantity is required")
+  @Min(value = 1, message = "Quantity must be at least 1")
+  private Integer quantity;
 }

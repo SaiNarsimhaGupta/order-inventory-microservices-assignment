@@ -1,11 +1,8 @@
 package org.koerber.orderservice.enums;
 
-/**
- * Enum for OrderStatus.
- */
+/** Enum for OrderStatus. */
 public enum OrderStatus {
-    PENDING,
-    CONFIRMED,
-    FAILED
+  PENDING,
+  CONFIRMED,
+  FAILED
 }
-

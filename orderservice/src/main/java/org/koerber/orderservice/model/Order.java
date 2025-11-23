@@ -1,17 +1,14 @@
 package org.koerber.orderservice.model;
 
 import jakarta.persistence.*;
+import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.koerber.orderservice.enums.OrderStatus;
 
-import java.time.LocalDateTime;
-
-/**
- * Order Entity
- */
+/** Order Entity */
 @Entity
 @Table(name = "orders")
 @Data
@@ -20,28 +17,27 @@ import java.time.LocalDateTime;
 @Builder
 public class Order {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-    @Column(nullable = false, unique = true)
-    private String orderId;
+  @Column(nullable = false, unique = true)
+  private String orderId;
 
-    @Column(nullable = false)
-    private String productCode;
+  @Column(nullable = false)
+  private String productCode;
 
-    @Column(nullable = false)
-    private Integer quantity;
+  @Column(nullable = false)
+  private Integer quantity;
 
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    private OrderStatus status;
+  @Enumerated(EnumType.STRING)
+  @Column(nullable = false)
+  private OrderStatus status;
 
-    @Column(nullable = false)
-    private LocalDateTime orderDate;
+  @Column(nullable = false)
+  private LocalDateTime orderDate;
 
-    private String message;
+  private String message;
 
-    private Integer remainingStock;
-
+  private Integer remainingStock;
 }

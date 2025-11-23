@@ -1,39 +1,36 @@
 package org.koerber.orderservice.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import java.time.LocalDate;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
-
-/**
- * DTO representing an inventory batch in API responses
- */
+/** DTO representing an inventory batch in API responses */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class BatchDTO {
 
-    private Long batchId;
+  private Long batchId;
 
-    private String batchNumber;
+  private String batchNumber;
 
-    private Integer quantity;
+  private Integer quantity;
 
-    @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDate expiryDate;
+  @JsonFormat(pattern = "yyyy-MM-dd")
+  private LocalDate expiryDate;
 
-    @JsonFormat(pattern = "yyyy-MM-dd")
-    private LocalDate manufacturingDate;
+  @JsonFormat(pattern = "yyyy-MM-dd")
+  private LocalDate manufacturingDate;
 
-    private String status;
+  private String status;
 
-    private String supplierName;
+  private String supplierName;
 
-    private Integer daysUntilExpiry;
+  private Integer daysUntilExpiry;
 
-    private Boolean isExpired;
+  private Boolean isExpired;
 }
